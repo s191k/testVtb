@@ -3,12 +3,16 @@ import com.codeborne.selenide.SelenideElement;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
+import vtb.loginPage.LoginPage;
+import vtb.mainPage.MainPage;
+
 import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-import static com.codeborne.selenide.Selectors.*;
+import static com.codeborne.selenide.Selectors.byXpath;
 import static com.codeborne.selenide.Selenide.*;
+
 
 public class VtbTest {
 
@@ -24,7 +28,6 @@ public class VtbTest {
          * */
         String cardNUmberOrLogin = "5555666677778888";
         String password = "\"5555666677778888\"";
-
         $(byXpath("//a[text()='ВТБ-Онлайн']")).click();
         $(byXpath("//label[text()='Номер карты или логин (УНК)']")).parent().$(byXpath("input")).sendKeys(cardNUmberOrLogin);
         $(byXpath("//button[text()='Далее']")).click();
@@ -42,6 +45,7 @@ public class VtbTest {
         $(byXpath("//div[text()='Вход в ВТБ-Онлайн']"));
         LoginPage.login("5555666677778888", "5555666677778888");
         $(byXpath("//div[text()='Проверьте логин, правильность пароля и срок его действия.']"));
+        MainPage.clickLogin();
     }
 
     public Stream<SelenideElement> getStreamOfNavigationItems() {
