@@ -2,6 +2,7 @@ package ru.savkk.test;
 import cucumber.api.java.ru.Допустим;
 import cucumber.api.java.ru.И;
 
+import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 
 public class MySteps {
@@ -13,7 +14,7 @@ public class MySteps {
 
     @И("^(\\d+) равно (\\d+)$")
     public void равно(int arg0, int arg1) {
-        SoftAssertionsInstance.getSoftAssertionsInstance().assertThat(arg0).isEqualTo(arg1);
+        SoftAssertionsInstance.getSoftAssertionsInstance().
     }
 
 
