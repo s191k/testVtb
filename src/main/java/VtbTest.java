@@ -3,8 +3,8 @@ import com.codeborne.selenide.SelenideElement;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
-import vtb.loginPage.LoginPage;
-import vtb.mainPage.MainPage;
+//import vtb.loginPage.LoginPage;
+//import vtb.mainPage.MainPage;
 
 import java.util.List;
 import java.util.stream.Collectors;
@@ -43,9 +43,9 @@ public class VtbTest {
         * */
         $(byXpath("//a[text()='ВТБ-Онлайн']")).click();
         $(byXpath("//div[text()='Вход в ВТБ-Онлайн']"));
-        LoginPage.login("5555666677778888", "5555666677778888");
+//        LoginPage.login("5555666677778888", "5555666677778888");
         $(byXpath("//div[text()='Проверьте логин, правильность пароля и срок его действия.']"));
-        MainPage.clickLogin();
+//        MainPage.clickLogin();
     }
 
     public Stream<SelenideElement> getStreamOfNavigationItems() {
