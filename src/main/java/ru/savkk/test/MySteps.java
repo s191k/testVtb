@@ -1,8 +1,8 @@
 package ru.savkk.test;
 
 import cucumber.api.java.ru.Допустим;
-import vtb.loginPage.LoginPage;
-import vtb.mainPage.MainPage;
+//import vtb.loginPage.LoginPage;
+//import vtb.mainPage.MainPage;
 
 import static com.codeborne.selenide.Selectors.byXpath;
 import static com.codeborne.selenide.Selenide.$;
@@ -47,15 +47,15 @@ public class MySteps {
 
 //    with PageObject
 
-    @Допустим("^Сначала нажимаем кнопку ВТБ-Онлайн используя PageObject$")
-    public void сначалаНажимаемКнопкуВТБОнлайнИспользуяPageObject() {
-        MainPage.clickLogin();
-    }
-
-    @Допустим("^Логинимся с (\\d+) и (\\d+) используя PageObject$")
-    public void логинимсяСЛогиномИПаролемИспользуяPageObject(String cardNUmberOrLogin, String password) {
-        LoginPage.login(cardNUmberOrLogin, password);
-    }
+//    @Допустим("^Сначала нажимаем кнопку ВТБ-Онлайн используя PageObject$")
+//    public void сначалаНажимаемКнопкуВТБОнлайнИспользуяPageObject() {
+//        MainPage.clickLogin();
+//    }
+//
+//    @Допустим("^Логинимся с (\\d+) и (\\d+) используя PageObject$")
+//    public void логинимсяСЛогиномИПаролемИспользуяPageObject(String cardNUmberOrLogin, String password) {
+//        LoginPage.login(cardNUmberOrLogin, password);
+//    }
 
 
 }
