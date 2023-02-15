@@ -61,7 +61,7 @@ public class VtbTest {
 //        System.setProperty("webdriver.chrome.driver", "C:\\Users\\chromedriver.exe");
 
 //        Configuration.remote = "http://localhost:4444/wd/hub";
-        Configuration.remote = "http://172.17.110.193:4444/wd/hub";
+        Configuration.remote = "http://10.76.38.96:4444/wd/hub";
 //        ChromeOptions opts = new ChromeOptions();
 //        opts.addArguments("start-maximized");
 //        driver = new ChromeDriver(opts);
