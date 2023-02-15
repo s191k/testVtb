@@ -1,14 +1,11 @@
 package example;
 
-import com.codeborne.selenide.Condition;
-import com.codeborne.selenide.Configuration;
-import com.codeborne.selenide.SelenideElement;
+import com.codeborne.selenide.*;
 //import org.junit.Assert;
 //import org.junit.Before;
 //import org.junit.Test;
 
 //import org.openqa.selenium.By;
-import com.codeborne.selenide.WebDriverRunner;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -117,9 +114,9 @@ public class VtbTest {
         }
     }
 
-//        @AfterTest
-//    public void afterTest() {
-//        driver.quit();
-//    }
+    @AfterTest
+    public void afterTest() {
+        Selenide.close();
+    }
 
 }
