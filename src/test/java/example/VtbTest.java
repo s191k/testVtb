@@ -1,14 +1,20 @@
 package example;
 
 import com.codeborne.selenide.Condition;
+import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.SelenideElement;
 //import org.junit.Assert;
 //import org.junit.Before;
 //import org.junit.Test;
 
 //import org.openqa.selenium.By;
+import com.codeborne.selenide.WebDriverRunner;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import org.testng.annotations.BeforeTest;
@@ -31,6 +37,8 @@ import org.testng.annotations.AfterTest;
 //        driver.quit();
 //    }
 //}
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
@@ -43,8 +51,28 @@ public class VtbTest {
 
 //    @Before
     @BeforeTest
-    public void enter_home(){
+    public void enter_home() throws MalformedURLException {
+//
+//        open("https://www.vtb.ru/");
+//        WebDriver driver;
+        Configuration.browser = "chrome";
+        Configuration.timeout = 20000;
+        Configuration.pageLoadStrategy="normal";
+//        System.setProperty("webdriver.chrome.driver", "C:\\Users\\chromedriver.exe");
+
+        Configuration.remote = "http://localhost:4444/wd/hub";
+
+//        ChromeOptions opts = new ChromeOptions();
+//        opts.addArguments("start-maximized");
+//        driver = new ChromeDriver(opts);
+//        WebDriverRunner.setWebDriver(driver);
+
+//        driver.get("https://www.vtb.ru/");
+
         open("https://www.vtb.ru/");
+
+        //        RemoteWebDriver driver=new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), dr);
+
     }
 
     @Test
