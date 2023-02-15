@@ -13,9 +13,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.Assert;
-import org.testng.annotations.Test;
-import org.testng.annotations.BeforeTest;
-import org.testng.annotations.AfterTest;
+import org.testng.annotations.*;
 
 //public class NewTest {
 //    private WebDriver driver;
@@ -47,13 +45,14 @@ import static com.codeborne.selenide.Selenide.*;
 public class VtbTest {
 
 //    @Before
-    @BeforeTest
+
+    @BeforeMethod
     public void enter_home() throws MalformedURLException {
 //
 //        open("https://www.vtb.ru/");
 //        WebDriver driver;
         Configuration.browser = "chrome";
-        Configuration.timeout = 20000;
+        Configuration.timeout = 10000;
         Configuration.pageLoadStrategy="normal";
 //        System.setProperty("webdriver.chrome.driver", "C:\\Users\\chromedriver.exe");
 
@@ -114,7 +113,7 @@ public class VtbTest {
         }
     }
 
-    @AfterTest
+    @AfterMethod
     public void afterTest() {
         Selenide.close();
     }
