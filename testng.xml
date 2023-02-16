@@ -3,7 +3,23 @@
 <suite name="Practice">
     <test name="Test">
         <classes>
-            <class name="example.VtbTest"/>
+            <class name="example.VtbTest">
+                <methods>
+                    <include name="testtemp" />
+                </methods>
+            </class>
         </classes>
     </test><!-- Test -->
 </suite><!-- Test -->
+
+
+<!--Full classes-->
+<!--        <?xml version="1.0" encoding="UTF-8"?>-->
+<!--        <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">-->
+<!--<suite name="Practice">-->
+<!--<test name="Test">-->
+<!--    <classes>-->
+<!--        <class name="example.VtbTest"/>-->
+<!--    </classes>-->
+<!--</test>&lt;!&ndash; Test &ndash;&gt;-->
+<!--</suite>&lt;!&ndash; Test &ndash;&gt;-->
