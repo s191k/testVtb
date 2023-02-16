@@ -90,9 +90,13 @@
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>2.22.2</version>
                 <inherited>true</inherited>
-<!--                <configuration>-->
-<!--                    <suiteXmlFiles>testng.xml</suiteXmlFiles>-->
-<!--                </configuration>-->
+                <configuration>
+                    <suiteXmlFiles>
+                        <suiteXmlFile>
+                            src\test\resources\test_suite.xml
+                        </suiteXmlFile>
+                    </suiteXmlFiles>
+                </configuration>
             </plugin>
         </plugins>
     </build>
